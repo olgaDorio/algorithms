@@ -17,11 +17,13 @@ const selectionSort = (array=[]) => {
 
   for (let i = 0; i < _array.length; i++){
     let min = i;
+
     for (let j = i + 1; j < _array.length; j++){
-      if (_array[i] > _array[j]){
+      if (_array[min] > _array[j]){
         min = j;
       }
     }
+
     [_array[i], _array[min]] = [_array[min], _array[i]]
   }
 
@@ -32,4 +34,4 @@ const arr = Array.from({length: 100}, () => Math.round(-500 + Math.random() * 10
 
 console.log('initial: ', arr)
 // console.log('bubbleSort: ', bubbleSort(arr));
-console.log('selectionSort: ', bubbleSort(arr));
+console.log('selectionSort: ', selectionSort(arr));
