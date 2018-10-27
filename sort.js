@@ -18,7 +18,7 @@ const selectionSort = (array=[]) => {
   for (let i = 0; i < _array.length; i++){
     let min = i;
     for (let j = i + 1; j < _array.length; j++){
-      if (_array[min] > _array[j]){
+      if (_array[i] > _array[j]){
         min = j;
       }
     }
