@@ -1,15 +1,18 @@
 const bubbleSort = (array=[]) => {
-  for (let i = 0; i<array.length; i++) {
-    for (let j=0;j<array.length; j++) {
-      if (array[i] < array[j]) {
-        [array[i], array[j]] = [array[j], array[i]];
+  const _array = array.slice();
+
+  for (let i = 0; i<_array.length; i++) {
+    for (let j=0;j<_array.length; j++) {
+      if (_array[i] < _array[j]) {
+        [_array[i], _array[j]] = [_array[j], _array[i]];
       }
     }
   }
 
-  return array;
+  return _array;
 }
 
 const arr = Array.from({length: 100}, () => Math.round(-500 + Math.random() * 1000));
-console.log(bubbleSort(arr));
-console.log(arr)
+
+console.log('initial: ', arr)
+console.log('sorted: ', bubbleSort(arr));
