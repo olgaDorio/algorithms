@@ -31,5 +31,5 @@ const selectionSort = (array=[]) => {
 const arr = Array.from({length: 100}, () => Math.round(-500 + Math.random() * 1000));
 
 console.log('initial: ', arr)
-console.log('bubbleSort: ', bubbleSort(arr));
+// console.log('bubbleSort: ', bubbleSort(arr));
 console.log('selectionSort: ', bubbleSort(arr));
